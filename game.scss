@@ -1,0 +1,18 @@
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    &__h2 {
+        color: #0034ff;
+    }
+
+    &__text {
+        font-size: 20px;
+        color: black;
+        font-family: 'Lobster';
+        line-height: 150%;
+    }
+}

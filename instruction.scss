@@ -1,0 +1,29 @@
+.instruction {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+
+    &__list {
+        max-width: 600px;
+        padding-left: 0;
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    &__button {
+        line-height: 100%;
+        margin: 0;
+        cursor: pointer;
+        color: red;
+        outline: 0;
+        font-size: 20px;
+    }
+
+    &__check {
+        visibility: hidden;
+    }
+}
