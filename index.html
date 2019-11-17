@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blows and Cows</title>
+    <script src="game.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:400,
+    500&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+
+<body onload="getRandom(); setMemory(); getMemory();">
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="#instruction" class="nav__link" onclick="openInstruction()">Как играть?</a></li>
+                <li><a href="#records" class="nav__link" onclick="openRecords();">Рекорды</a></li>
+                <li><a href="#" class="nav__link" onclick="moo();">Сказать Муу...</a></li>
+            </ul>
+        </nav>
+        <div class="header__background">
+            <h1 class="header__h1">Быки и коровы</h1>
+        </div>
+    </header>
+
+    <article class="article">
+        <section class="instruction" id="instruction">
+            <ol class="instruction__list">
+                <li instruction__li>
+                    Компьютер загадывает четырёхзначное число, цифры которого не повторяются. 
+                    Попробуйте отгадать это число.
+                </li>
+                <li instruction__li>
+                    Если в предложенном вами числе есть цифры, которые есть в числе, которое 
+                    загадал компьютер, но они не совпадают с загаданным компьютером порядком 
+                    то вам будет засчитана корова.
+                </li>
+                <li instruction__li>
+                    Если в предложенном вами числе есть цифры, которые совпадают с загаданным 
+                    компьютером включая порядок расположения, то вам будет засчитан бык.
+                </li>
+                <li instruction__li>
+                    Когда вы отгадаете всё загаданное число - у вас будет 4 быка и игра завершится.
+                </li>
+            </ol>
+                <button class="instruction__button" onclick="closeInstruction();"> X </button>
+        </section>
+        
+        <section class="records" id="records">
+            <ol class="records__ol">
+                <li class="records__item">
+                    <p class="records__p" id="records__p0"></p>
+                    <hr>
+                </li>
+                <li class="records__item">
+                    <p class="records__p" id="records__p1"></p>
+                    <hr>
+                </li>
+                <li class="records__item">
+                    <p class="records__p" id="records__p2"></p>
+                    <hr>
+                </li>
+                <li class="records__item">
+                    <p class="records__p" id="records__p3"></p>
+                    <hr>
+                </li>
+                <li class="records__item">
+                    <p class="records__p" id="records__p4"></p>
+                    <hr>
+                </li>
+                <li class="records__item">
+                    <p class="records__p" id="records__p5"></p>
+                    <hr>
+                </li>
+                <li class="records__item">
+                    <p class="records__p" id="records__p6"></p>
+                    <hr>
+                </li>
+                <li class="records__item">
+                    <p class="records__p" id="records__p7"></p>
+                    <hr>
+                </li>
+                <li class="records__item">
+                    <p class="records__p" id="records__p8"></p>
+                    <hr>
+                </li>
+                <li class="records__item">
+                    <p class="records__p" id="records__p9"></p>
+                    <hr>
+                </li>
+            </ol>
+            <button class="records__button" onclick="closeRecords();"> X </button>
+        </section>
+
+        <section class="game" id="game">
+            <h2 class="game__h2">
+                Отгадайте число: xxxx
+            </h2>
+            <form action="" class="game__form">
+                <input type="number" id="number">
+                <button onclick="checkNumber();">Ход</button>
+            </form>
+            <p class="game__text" id="gameText"></p>
+        </section>
+    </article>
+</body>
+
+</html>
