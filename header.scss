@@ -1,0 +1,23 @@
+.header {
+  &__background {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      height: 270px;
+      width: 600px;
+      background-image: url('https://selo-exp.com/wp-content/uploads/2017/04/Коровый-айрширской-породы-выделяются-в-стаде.jpg');
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+  &__h1 {
+    font-family: 'Lobster';
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+}
